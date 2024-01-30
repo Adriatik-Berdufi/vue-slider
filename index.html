@@ -21,9 +21,9 @@
 
       <main>
         <div class="container" id="container">
-
+          
           <div class="slideContainer" id="slideContainer">
-            <img :src=" images[0] " alt="">
+            <img :src='images[activeImage]' alt="">
           </div>
           
           <div class="container-preview" id="thumbnailsContainer">
@@ -34,8 +34,8 @@
               >
           </div>
 
-          <div id="back" class="freccia back"> <i class="bi bi-arrow-up-circle text-white"></i></div>
-          <div id="next" class="freccia next"><i class="bi bi-arrow-down-circle text-white"></i></div>
+          <div id="back" class="freccia back" @click="prevImage()"> <i class="bi bi-arrow-up-circle text-white"></i></div>
+          <div id="next" class="freccia next" @click="nextImage()"><i class="bi bi-arrow-down-circle text-white"></i></div>
           
         </div>
 

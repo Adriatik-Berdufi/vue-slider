@@ -1,9 +1,10 @@
 const {createApp} = Vue;
-createApp({
 
+const app = createApp({
 
     data(){
         return{
+            activeImage: 0,
             images : [
               './img/01.webp',
               './img/02.webp', 
@@ -14,4 +15,29 @@ createApp({
           
         };
     },
-}).mount('#app');
+
+    methods: {
+        nextImage(){
+            if(this.activeImage >= this.images.length - 1){
+                this.activeImage = 0;
+            }else{
+                this.activeImage++;
+            };
+        },
+
+        prevImage(){
+            if(this.activeImage <= 0){
+                this.activeImage = this.images.length - 1;
+
+            }else{
+                this.activeImage--;
+            };
+        }
+
+
+    },
+
+
+})
+app.mount('#app');
+
