@@ -30,6 +30,8 @@
             <img 
             v-for = "(image, index) in images"
             :src="image"
+            :class="index == activeImage ? 'active-box' : ''" 
+            @click="thumb(index)"
             class="box"
               >
           </div>

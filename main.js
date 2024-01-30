@@ -2,6 +2,7 @@ const {createApp} = Vue;
 
 const app = createApp({
 
+
     data(){
         return{
             activeImage: 0,
@@ -32,7 +33,11 @@ const app = createApp({
             }else{
                 this.activeImage--;
             };
-        }
+        },
+
+        thumb(index){
+            this.activeImage = index;
+        },
 
 
     },
