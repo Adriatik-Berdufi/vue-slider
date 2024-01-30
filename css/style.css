@@ -1,0 +1,138 @@
+:root {
+ 
+  --color-main-background: rgb(210, 199, 199);
+  
+}
+
+/** Reset **/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 12%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: inline-block;
+}
+
+
+
+/** Utils **/
+.brd{
+  border: 2px dashed red;
+}
+
+
+
+/** Debug **/
+
+
+
+
+
+
+
+
+/** MAIN **/
+.wrapper{
+  min-height: 100vh;
+  background-color: var(--color-main-background);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/** container **/
+.container {
+  width: 1080px;
+  height: 700px;
+
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+/** Slide Container **/
+.slideContainer{
+  height: 100%;
+  width: 100%;
+  background-color: aqua; 
+  position: relative;
+}
+.slide{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+ 
+}
+.active-slide{
+  opacity: 1;
+}
+
+/** box preview**/
+.container-preview{
+  width: 15%;
+
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  right: 25px;
+}
+.box{
+  height: calc(100% / 5);
+  opacity: 0.65;
+  box-shadow: none;
+  border: none;
+}
+.special > img{
+  object-position: 90% 0;
+}
+.active-box{
+  opacity: 1;
+  box-shadow: 0px 0px 28px 10px #FFFFFF;
+  border: 2px solid RED;
+}
+
+/** box-freccie**/
+.freccia{
+  height: 50px;
+  aspect-ratio: 1;
+  background-color: rgba(222, 220, 217,0.7);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute; 
+  left: 50%;
+  transform: translate(-50%); 
+}
+.freccia > i{
+  font-size: 2.5rem;
+}
+.next{
+  top: 15px; 
+}
+.back{
+  bottom: 15px;
+}
