@@ -1,7 +1,5 @@
 const {createApp} = Vue;
-
 const app = createApp({
-
 
     data(){
         return{
@@ -39,10 +37,16 @@ const app = createApp({
             this.activeImage = index;
         },
 
-
+        outoPlay(){
+            this.autoplay = setInterval(() => {
+            this.nextImage();
+        }, 1000);
+        },    
+        stopAutoPlay(){
+            clearInterval(this.autoplay);
+        },
     },
 
-
-})
+});
 app.mount('#app');
 
