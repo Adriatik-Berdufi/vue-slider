@@ -18,14 +18,20 @@
   </head>
   <body>
     <div class="wrapper" id="app">
+
       <main>
         <div class="container" id="container">
 
           <div class="slideContainer" id="slideContainer">
-            
+            <img :src=" images[0] " alt="">
           </div>
           
           <div class="container-preview" id="thumbnailsContainer">
+            <img 
+            v-for = "(image, index) in images"
+            :src="image"
+            class="box"
+              >
           </div>
 
           <div id="back" class="freccia back"> <i class="bi bi-arrow-up-circle text-white"></i></div>
